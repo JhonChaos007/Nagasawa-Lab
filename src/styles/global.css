@@ -285,4 +285,6 @@ body {
       letter-spacing: 0.05em;
     }
   }
-  
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
