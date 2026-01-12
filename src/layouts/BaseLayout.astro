@@ -1,0 +1,35 @@
+---
+const {
+  title = "Nagasawa Lab",
+  description = "",
+  ogImage = "/ogp.png",
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={Astro.url.href} />
+
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body>
+    <nav class="nav">
+  <a href="/" class="nav-link">Home</a>
+  <a href="/works" class="nav-link">Game</a>
+  <a href="/music" class="nav-link">Music</a>
+  <a href="/review" class="nav-link">Review</a>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

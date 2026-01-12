@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const works = [
+  {
+    id: "music-1",
+    title: "Late night vibes",
+    desc: "2作目",
+    image: "/images/Music-1.jpg",
+  },
+  {
+    id: "music-2",
+    title: "Goodbye on Repeat",
+    desc: "1作目",
+    image: "/images/Music-2.jpg",
+  },
+];
+---
+
+<BaseLayout title="Music">
+  <h1>Music</h1>
+
+  <section class="works-grid">
+    {works.map((work) => (
+<a href={`/music/${work.id}`} class="work-card">
+  <img src={work.image} alt={work.title} />
+  <div class="work-info">
+    <h2>{work.title}</h2>
+    <p>{work.desc}</p>
+  </div>
+</a>
+    ))}
+  </section>
+</BaseLayout>

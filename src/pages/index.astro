@@ -1,16 +1,33 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Nagasawa Lab">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Nagasawa Lab</h1>
+      <p>Game / Music / Review</p>
+    </div>
+
+    <img src="/profile.jpg" alt="プロフィール画像" class="hero-image" />
+  </section>
+
+  <!-- カテゴリカード -->
+  <section class="category-cards">
+    <a href="/works" class="category-card">
+      <span class="icon">🎮</span>
+      <h2>Game</h2>
+    </a>
+
+    <a href="/music" class="category-card">
+      <span class="icon">🎵</span>
+      <h2>Music</h2>
+    </a>
+
+    <a href="/review" class="category-card">
+      <span class="icon">✍</span>
+      <h2>Review</h2>
+    </a>
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const works = [
+  {
+    id: "2025",
+    title: "",
+    desc: "110本視聴",
+    thumbText: "2025年",
+  },
+  {
+    id: "2024",
+    title: "",
+    desc: "61本視聴",
+    thumbText: "2024年",
+  },
+];
+---
+
+<BaseLayout title="Review">
+  <!-- ★ ここに review クラスを付ける -->
+  <section class="works-grid review">
+    {works.map(work => (
+      <a href={`/review/${work.id}`} class="work-card">
+        <div class="work-thumb text-thumb">
+          <div class="thumb-main">{work.thumbText}</div>
+
+          <div class="thumb-meta">
+            <div class="thumb-title">{work.title}</div>
+            <div class="thumb-desc">{work.desc}</div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>

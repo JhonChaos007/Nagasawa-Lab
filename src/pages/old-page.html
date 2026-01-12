@@ -1,0 +1,23 @@
+<!-- src/layouts/LegacyLayout.astro -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title><slot name="title" /></title>
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/works">Game</a>
+    <a href="/music">Music</a>
+    <a href="/review">Review</a>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+</body>
+</html>

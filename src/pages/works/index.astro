@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const works = [
+  {
+    id: "work-1",
+    title: "Cosmic Collector",
+    desc: "5作目",
+    image: "/images/work-1.jpg",
+  },
+  {
+    id: "work-2",
+    title: "Jugring Boy",
+    desc: "4作目",
+    image: "/images/work-2.jpg",
+  },
+  {
+    id: "work-3",
+    title: "LEAP BEYOND",
+    desc: "3作目",
+    image: "/images/work-3.jpg",
+  },
+  {
+    id: "work-4",
+    title: "CREEPY BIRD NAGASAWA",
+    desc: "2作目",
+    image: "/images/work-4.jpg",
+  },
+  {
+    id: "work-5",
+    title: "飛べ！ナガサワ・アホウドリ",
+    desc: "1作目",
+    image: "/images/work-5.jpg",
+  },
+];
+---
+
+<BaseLayout title="Game">
+  <section class="works-grid">
+    {works.map(work => (
+      <a href={`/works/${work.id}`} class="work-card">
+  <div class="work-thumb">
+    <img src={work.image} alt={work.title} />
+    <div class="work-overlay">
+      <h3>{work.title}</h3>
+      <p>{work.desc}</p>
+    </div>
+  </div>
+</a>
+    ))}
+  </section>
+</BaseLayout>
