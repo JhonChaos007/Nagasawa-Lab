@@ -1,26 +1,25 @@
 ---
 import "../styles/global.css";
----
 const {
   title = "Nagasawa Lab",
   description = "",
   ogImage = "/ogp.png",
 } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+<head>
+  <meta charset="UTF-8" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={Astro.url.href} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={Astro.url.href} />
+</head>
 
-    <link rel="stylesheet" href="styles/global.css" />
-  </head>
 
   <body>
     <nav class="nav">
