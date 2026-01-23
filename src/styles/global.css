@@ -285,6 +285,41 @@ body {
       letter-spacing: 0.05em;
     }
   }
+/* ===== 完全 iframe 封じ込め ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ナビの高さ分を引いた表示領域 */
+.page {
+  min-height: calc(100vh - 60px);
+}
+
+/* ゲーム枠 */
+.game-embed {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* iframe 本体 */
+.game-embed iframe {
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+
+
   @tailwind base;
 @tailwind components;
 @tailwind utilities;
