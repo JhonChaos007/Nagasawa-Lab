@@ -302,7 +302,7 @@ html, body {
 /* ゲーム枠 */
 .game-embed {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(120vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,39 +317,29 @@ html, body {
   border: none;
   display: block;
 }
-/* ===== スマホ縦持ちガイド ===== */
-.rotate-hint {
-  display: none;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #000;
-  color: #0ff;
-}
-
-/* スマホ縦 */
-@media (max-width: 768px) and (orientation: portrait) {
-  .rotate-hint {
-    display: block;
-  }
-
-  .game-embed {
-    display: none;
-  }
-}
-/* ===== スマホ横最適化 ===== */
+/* ===============================
+   Mobile Landscape ONLY
+================================ */
 @media (max-width: 768px) and (orientation: landscape) {
-  .game-embed {
-    height: 100vh;
-  }
 
-  .game-embed iframe {
-    max-width: none;
-    height: 100vh;
+  body {
+    overflow: hidden;
   }
 
   nav {
-    display: none; /* 没入感UP */
+    display: none;
+  }
+
+  .game-embed {
+    height: 120svh; /* ← ここ重要 */
+    align-items: center;
+    margin: 0;
+  }
+
+  .game-embed iframe {
+    height: 120svh;
+    width: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
