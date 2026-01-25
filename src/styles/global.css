@@ -302,7 +302,9 @@ html, body {
 /* ゲーム枠 */
 .game-embed {
   width: 100%;
-  height: calc(120vh - 60px);
+  max-width: 1000px; /* 最大幅を制限 */
+  margin: 40px auto;
+  aspect-ratio: 16 / 9; /* アスペクト比を16:9に固定 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,13 +333,14 @@ html, body {
   }
 
   .game-embed {
-    height: 120svh; /* ← ここ重要 */
+    height: 100svh; /* viewport heightを使用 */
+    width: auto; /* 幅を自動調整 */
     align-items: center;
     margin: 0;
   }
 
   .game-embed iframe {
-    height: 120svh;
+    height: 100svh;
     width: auto;
     aspect-ratio: 16 / 9;
   }
