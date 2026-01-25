@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Cosmic Collector">
-  <h1>飛べ！Cosmic Collector</h1>
+  <h1>Cosmic Collector</h1>
 
  <div class="game-embed">
     <iframe
@@ -13,14 +13,39 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     ></iframe>
   </div>
 
-  <p>このゲームは、宇宙空間でカゴ（UFO）を操作し
-<br>落ちてくる「星」を集めながら「隕石」を避けるアクションゲームです。
+  <p>無限に広がる宇宙を舞台に、UFOを操って星を集める爽快アクションゲームです。
+<br>PC・スマホどちらからでも手軽にプレイいただけます。
 
-​<p><span style="background-color:#00FFFF">【操作方法】</span>
-<br>PC：マウスを左右に動かして移動
-<br>スマホ：画面をタッチして指を左右にスライドして移動
+​​<p><span style="background-color:#00FFFF">【操作方法】</span>
+<br><span style="border: 1px solid #333;"><strong>PC</span></strong>
+<br>移動: マウスを左右に動かすことでUFOが追従します。
+<br>画面: マウスカーソルの位置に合わせてスピーディーに回避・収集が可能です。
 
+​<p><span style="border: 1px solid #333;"><strong>スマホ</span></strong>
+<br>移動: 画面を指でタッチしてスライド（ドラッグ）させます。
+<br>フルスクリーン: 「START GAME」をタップすると自動的に全画面モードになり、縦画面に固定されます。
+<br>オフセット操作: 指で自機が隠れないよう、タッチ位置の少し上にUFOが表示される設計です。
+
+
+<p><span style="background-color:#00FFFF">【ルール】</span>
+<br>黄色い星を集めるとスコアアップ。灰色の隕石に当たるとゲームオーバーです。星を集めるごとに少しずつゲームのスピードが上がります。
 ​
+<p><span style="border: 1px solid #333;"><strong>スコアを稼ぐ</span></strong>
+<br>・画面上部から流れてくる**「⭐（星）」**を拾うとスコアが加算されます。
+<br>・連続で星を拾うと**「COMBO（コンボ）」**が発生！コンボ数に応じて獲得スコアが倍増します。
 
-​<p>ルール: 黄色い星を集めるとスコアアップ。灰色の隕石に当たるとゲームオーバーです。星を集めるごとに少しずつゲームのスピードが上がります。
+​<p><span style="border: 1px solid #333;"><strong>障害物を回避</span></strong>
+<br>・隕石: 衝突するとゲームオーバーです。
+<br>・敵UFO: 左右に動きながら弾を撃ってきます。本体や弾に当たらないよう注意しましょう。
+
+<p><span style="border: 1px solid #333;"><strong>パワーアップアイテムを活用</span></strong>
+<br>・🛡 シールド: 障害物のダメージを一度だけ無効化します。
+<br>・&#129522; マグネット: 周囲の星を自動的に引き寄せます。
+<br>・⏱ スローモーション: 一定時間、宇宙の流れがゆっくりになり回避しやすくなります。
+
+
+<p><span style="border: 1px solid #333;"><strong>難易度の変化</span></strong>
+<br>・スコアが上がるにつれて、隕石の落下速度や敵の攻撃が激しくなります。
+<br>・スマホ版特別調整: PCより操作画面が狭いスマホユーザーのために、当たり判定がわずかに甘く（小さく）設定されており、快適にプレイできます。
+
 </BaseLayout>
